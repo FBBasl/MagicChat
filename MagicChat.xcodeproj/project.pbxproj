@@ -12,6 +12,12 @@
 		21392C2B1EDCB0CF0075A534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21392C291EDCB0CF0075A534 /* Main.storyboard */; };
 		21392C2D1EDCB0CF0075A534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21392C2C1EDCB0CF0075A534 /* Assets.xcassets */; };
 		21392C301EDCB0CF0075A534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21392C2E1EDCB0CF0075A534 /* LaunchScreen.storyboard */; };
+		21392C391EDCB5410075A534 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21392C371EDCB5410075A534 /* RegistrationViewController.swift */; };
+		21392C3A1EDCB5410075A534 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21392C381EDCB5410075A534 /* RegistrationViewController.xib */; };
+		21392C3C1EDCB5560075A534 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21392C3B1EDCB5560075A534 /* FirebaseManager.swift */; };
+		21392C3F1EDCB5640075A534 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21392C3D1EDCB5640075A534 /* AuthenticationViewController.swift */; };
+		21392C401EDCB5640075A534 /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21392C3E1EDCB5640075A534 /* AuthenticationViewController.xib */; };
+		21392C421EDCB5780075A534 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21392C411EDCB5780075A534 /* GoogleService-Info.plist */; };
 		B2A7C27D5EBBD9059634B007 /* Pods_MagicChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4011211C8E69B49C517CA1 /* Pods_MagicChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +30,12 @@
 		21392C2C1EDCB0CF0075A534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21392C2F1EDCB0CF0075A534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21392C311EDCB0CF0075A534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21392C371EDCB5410075A534 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		21392C381EDCB5410075A534 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		21392C3B1EDCB5560075A534 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		21392C3D1EDCB5640075A534 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		21392C3E1EDCB5640075A534 /* AuthenticationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
+		21392C411EDCB5780075A534 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27AFDC3E35E68586BBD7C7BF /* Pods-MagicChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicChat/Pods-MagicChat.debug.xcconfig"; sourceTree = "<group>"; };
 		BA60C5E8CF4D4D7D9341355E /* Pods-MagicChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicChat/Pods-MagicChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +87,12 @@
 				21392C2C1EDCB0CF0075A534 /* Assets.xcassets */,
 				21392C2E1EDCB0CF0075A534 /* LaunchScreen.storyboard */,
 				21392C311EDCB0CF0075A534 /* Info.plist */,
+				21392C371EDCB5410075A534 /* RegistrationViewController.swift */,
+				21392C381EDCB5410075A534 /* RegistrationViewController.xib */,
+				21392C3B1EDCB5560075A534 /* FirebaseManager.swift */,
+				21392C3D1EDCB5640075A534 /* AuthenticationViewController.swift */,
+				21392C3E1EDCB5640075A534 /* AuthenticationViewController.xib */,
+				21392C411EDCB5780075A534 /* GoogleService-Info.plist */,
 			);
 			path = MagicChat;
 			sourceTree = "<group>";
@@ -151,9 +169,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21392C401EDCB5640075A534 /* AuthenticationViewController.xib in Resources */,
 				21392C301EDCB0CF0075A534 /* LaunchScreen.storyboard in Resources */,
+				21392C3A1EDCB5410075A534 /* RegistrationViewController.xib in Resources */,
 				21392C2D1EDCB0CF0075A534 /* Assets.xcassets in Resources */,
 				21392C2B1EDCB0CF0075A534 /* Main.storyboard in Resources */,
+				21392C421EDCB5780075A534 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21392C3C1EDCB5560075A534 /* FirebaseManager.swift in Sources */,
+				21392C391EDCB5410075A534 /* RegistrationViewController.swift in Sources */,
+				21392C3F1EDCB5640075A534 /* AuthenticationViewController.swift in Sources */,
 				21392C281EDCB0CF0075A534 /* ViewController.swift in Sources */,
 				21392C261EDCB0CF0075A534 /* AppDelegate.swift in Sources */,
 			);
@@ -338,7 +362,7 @@
 				DEVELOPMENT_TEAM = GQR46TQP7D;
 				INFOPLIST_FILE = MagicChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.test.MagicChat;
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.test.Magic-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -352,7 +376,7 @@
 				DEVELOPMENT_TEAM = GQR46TQP7D;
 				INFOPLIST_FILE = MagicChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.test.MagicChat;
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.test.Magic-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -377,6 +401,7 @@
 				21392C361EDCB0CF0075A534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
