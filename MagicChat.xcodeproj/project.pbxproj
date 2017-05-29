@@ -12,9 +12,11 @@
 		21392C2B1EDCB0CF0075A534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21392C291EDCB0CF0075A534 /* Main.storyboard */; };
 		21392C2D1EDCB0CF0075A534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21392C2C1EDCB0CF0075A534 /* Assets.xcassets */; };
 		21392C301EDCB0CF0075A534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21392C2E1EDCB0CF0075A534 /* LaunchScreen.storyboard */; };
+		B2A7C27D5EBBD9059634B007 /* Pods_MagicChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4011211C8E69B49C517CA1 /* Pods_MagicChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B4011211C8E69B49C517CA1 /* Pods_MagicChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21392C221EDCB0CF0075A534 /* MagicChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21392C251EDCB0CF0075A534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21392C271EDCB0CF0075A534 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		21392C2C1EDCB0CF0075A534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21392C2F1EDCB0CF0075A534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21392C311EDCB0CF0075A534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AFDC3E35E68586BBD7C7BF /* Pods-MagicChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicChat/Pods-MagicChat.debug.xcconfig"; sourceTree = "<group>"; };
+		BA60C5E8CF4D4D7D9341355E /* Pods-MagicChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicChat/Pods-MagicChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A7C27D5EBBD9059634B007 /* Pods_MagicChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		028D7EF9C732134B022A3A20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B4011211C8E69B49C517CA1 /* Pods_MagicChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		21392C191EDCB0CF0075A534 = {
 			isa = PBXGroup;
 			children = (
 				21392C241EDCB0CF0075A534 /* MagicChat */,
 				21392C231EDCB0CF0075A534 /* Products */,
+				593D90DE15F210F8333D375E /* Pods */,
+				028D7EF9C732134B022A3A20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = MagicChat;
 			sourceTree = "<group>";
 		};
+		593D90DE15F210F8333D375E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27AFDC3E35E68586BBD7C7BF /* Pods-MagicChat.debug.xcconfig */,
+				BA60C5E8CF4D4D7D9341355E /* Pods-MagicChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21392C341EDCB0CF0075A534 /* Build configuration list for PBXNativeTarget "MagicChat" */;
 			buildPhases = (
+				C896CB3F10AAEFF9D6215FAD /* [CP] Check Pods Manifest.lock */,
 				21392C1E1EDCB0CF0075A534 /* Sources */,
 				21392C1F1EDCB0CF0075A534 /* Frameworks */,
 				21392C201EDCB0CF0075A534 /* Resources */,
+				FDBD59BEB31C2EC3F57AB71B /* [CP] Embed Pods Frameworks */,
+				C750B698ECBF2424E0EFAE02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C750B698ECBF2424E0EFAE02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagicChat/Pods-MagicChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C896CB3F10AAEFF9D6215FAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBD59BEB31C2EC3F57AB71B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagicChat/Pods-MagicChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21392C1E1EDCB0CF0075A534 /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		21392C351EDCB0CF0075A534 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27AFDC3E35E68586BBD7C7BF /* Pods-MagicChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GQR46TQP7D;
@@ -270,6 +346,7 @@
 		};
 		21392C361EDCB0CF0075A534 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA60C5E8CF4D4D7D9341355E /* Pods-MagicChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GQR46TQP7D;
