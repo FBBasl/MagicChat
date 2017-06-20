@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollBG: UIImageView!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    
     //Контроллеры, которые лежат в скролл вью
     var firstReg                     = AuthenticationViewController()
     var secondReg                    = RegistrationViewController()
@@ -23,15 +24,14 @@ class ViewController: UIViewController {
         
         registerXibs()
         
-        //        let blurEffect = UIBlurEffect(style: .dark)
-        //        let visualEffect = UIVisualEffectView(effect: blurEffect)
-        //        visualEffect.frame = view.bounds
-        //        visualEffect.alpha = 0.8
-        //        self.scrollBG.addSubview(visualEffect)
-        
     }
     
     func registerXibs() {
+        
+        let blurEffect = UIBlurEffect(style: .dark)
+        let visualEffect = UIVisualEffectView(effect: blurEffect)
+        visualEffect.frame = scrollBG.bounds
+        scrollBG.addSubview(visualEffect)
         
         //регим ксибки
         firstReg                         = AuthenticationViewController(nibName: String(describing: AuthenticationViewController.self), bundle: nil)

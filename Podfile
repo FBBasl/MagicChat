@@ -10,5 +10,6 @@ target 'MagicChat' do
 	pod 'Firebase/Storage'
         pod 'Firebase/Auth'
   	pod 'Firebase/Database'
+	pod 'XLPagerTabStrip', '~> 7.0'
 	
 end

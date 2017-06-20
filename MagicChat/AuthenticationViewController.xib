@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,10 +15,11 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationViewController" customModule="Magic_Chat" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationViewController" customModule="MagicChat" customModuleProvider="target">
             <connections>
                 <outlet property="authLabel" destination="qF2-tY-ebg" id="eJX-jE-jZD"/>
                 <outlet property="emailTF" destination="6T0-b1-YAk" id="IiV-RS-dSE"/>
+                <outlet property="errorLabel" destination="81M-O5-DUs" id="Y5N-cK-bbr"/>
                 <outlet property="loginButton" destination="hJS-uN-DSy" id="cFf-ML-Sf5"/>
                 <outlet property="parolTF" destination="MoH-ad-9Zu" id="Whz-jl-5o7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="gBd-rz-jHg"/>
@@ -26,29 +30,42 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WM1-Eh-wgd">
-                    <frame key="frameInset" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="qF2-tY-ebg">
+                    <rect key="frame" x="63" y="140" width="250" height="35"/>
                     <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="30"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="   email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-b1-YAk">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-b1-YAk" customClass="TextField" customModule="MagicChat" customModuleProvider="target">
+                    <rect key="frame" x="49" y="257" width="280" height="37"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="32" id="325-ir-cBU"/>
+                        <constraint firstAttribute="height" constant="37" id="325-ir-cBU"/>
                     </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="13"/>
-                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
+                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="   password" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoH-ad-9Zu">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoH-ad-9Zu" customClass="TextField" customModule="MagicChat" customModuleProvider="target">
+                    <rect key="frame" x="49" y="310" width="280" height="37"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="13"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNr-nM-zlK">
+                    <rect key="frame" x="88" y="630" width="199" height="28"/>
+                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="13"/>
+                    <state key="normal" title="Create an account">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81M-O5-DUs">
+                    <rect key="frame" x="59" y="199" width="256" height="42"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJS-uN-DSy">
+                    <rect key="frame" x="103" y="418" width="170" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="hJS-uN-DSy" secondAttribute="height" multiplier="169:62" constant="1" id="esk-tc-xr4"/>
                     </constraints>
@@ -56,23 +73,21 @@
                     <state key="normal" title="Login">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNr-nM-zlK">
-                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="13"/>
-                    <state key="normal" title="Create an account">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <connections>
+                        <action selector="loginButton:" destination="-1" eventType="touchUpInside" id="QiZ-e4-GUe"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="81M-O5-DUs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="59" id="2Cj-Kt-2og"/>
                 <constraint firstAttribute="trailing" secondItem="kNr-nM-zlK" secondAttribute="trailing" constant="88" id="7B8-pm-V8J"/>
                 <constraint firstAttribute="trailing" secondItem="hJS-uN-DSy" secondAttribute="trailing" constant="102" id="ALI-PG-eJ7"/>
                 <constraint firstItem="6T0-b1-YAk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="49" id="IiE-Zz-qR8"/>
+                <constraint firstItem="81M-O5-DUs" firstAttribute="trailing" secondItem="qF2-tY-ebg" secondAttribute="trailing" constant="2" id="JIP-Mh-g76"/>
                 <constraint firstItem="qF2-tY-ebg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="63" id="Lb2-CD-dCS"/>
                 <constraint firstItem="MoH-ad-9Zu" firstAttribute="height" secondItem="6T0-b1-YAk" secondAttribute="height" id="M6H-Mk-yaj"/>
                 <constraint firstItem="MoH-ad-9Zu" firstAttribute="top" secondItem="6T0-b1-YAk" secondAttribute="bottom" constant="16" id="RZQ-PF-piS"/>
-                <constraint firstItem="hJS-uN-DSy" firstAttribute="top" secondItem="MoH-ad-9Zu" secondAttribute="bottom" constant="16" id="Tzq-EV-SlF"/>
+                <constraint firstItem="hJS-uN-DSy" firstAttribute="top" secondItem="MoH-ad-9Zu" secondAttribute="bottom" constant="71" id="Tzq-EV-SlF"/>
                 <constraint firstItem="qF2-tY-ebg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="XYb-NM-aby"/>
                 <constraint firstItem="kNr-nM-zlK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="88" id="Xky-JA-fwP"/>
                 <constraint firstItem="MoH-ad-9Zu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="49" id="bHK-B7-2Df"/>
@@ -81,8 +96,11 @@
                 <constraint firstItem="hJS-uN-DSy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="103" id="gqI-CP-5qN"/>
                 <constraint firstAttribute="trailing" secondItem="MoH-ad-9Zu" secondAttribute="trailing" constant="46" id="lKO-TM-9dT"/>
                 <constraint firstAttribute="trailing" secondItem="6T0-b1-YAk" secondAttribute="trailing" constant="46" id="qNm-WK-d6f"/>
+                <constraint firstItem="6T0-b1-YAk" firstAttribute="top" secondItem="81M-O5-DUs" secondAttribute="bottom" constant="16" id="t3Y-GM-p7w"/>
                 <constraint firstAttribute="trailing" secondItem="qF2-tY-ebg" secondAttribute="trailing" constant="62" id="tR1-Pa-NjM"/>
+                <constraint firstItem="81M-O5-DUs" firstAttribute="top" secondItem="qF2-tY-ebg" secondAttribute="bottom" constant="24" id="xt7-gi-BPQ"/>
             </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
         </view>
     </objects>
 </document>

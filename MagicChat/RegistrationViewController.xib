@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,9 +15,10 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="Magic_Chat" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="MagicChat" customModuleProvider="target">
             <connections>
                 <outlet property="emailTF" destination="diK-lO-zhj" id="NPa-kf-dvm"/>
+                <outlet property="errorLabel" destination="qrs-6n-ROr" id="0SL-UY-2rB"/>
                 <outlet property="goBackButton" destination="7QE-f6-H4A" id="oss-ti-N1q"/>
                 <outlet property="goButton" destination="kR4-1F-tSv" id="XAi-Es-xIj"/>
                 <outlet property="nicknameTF" destination="Hev-HP-Jju" id="Ty8-DU-ME9"/>
@@ -27,21 +31,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUz-Q9-vdv">
-                    <frame key="frameInset" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="   password" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qf3-zl-JF3">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qf3-zl-JF3" customClass="TextField" customModule="MagicChat" customModuleProvider="target">
+                    <rect key="frame" x="61" y="331" width="280" height="37"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="13"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="   email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diK-lO-zhj">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diK-lO-zhj" customClass="TextField" customModule="MagicChat" customModuleProvider="target">
+                    <rect key="frame" x="61" y="282" width="280" height="37"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="13"/>
-                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
+                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR4-1F-tSv">
+                    <rect key="frame" x="117" y="429" width="169" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="kR4-1F-tSv" secondAttribute="height" multiplier="169:62" id="nwx-C1-o0p"/>
                     </constraints>
@@ -49,8 +52,12 @@
                     <state key="normal" title="Go">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="goButton:" destination="-1" eventType="touchUpInside" id="M4n-ad-MgF"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QE-f6-H4A">
+                    <rect key="frame" x="67" y="630" width="240" height="28"/>
                     <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="13"/>
                     <state key="normal" title="Already have an account?">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,24 +67,33 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="END-ly-iIa">
+                    <rect key="frame" x="75" y="122" width="250" height="35"/>
                     <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="30"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hev-HP-Jju">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hev-HP-Jju" customClass="TextField" customModule="MagicChat" customModuleProvider="target">
+                    <rect key="frame" x="61" y="233" width="280" height="37"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="32" id="yyX-gN-pLS"/>
+                        <constraint firstAttribute="height" constant="37" id="yyX-gN-pLS"/>
                     </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="13"/>
-                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
+                    <fontDescription key="fontDescription" name="Sathu" family="Sathu" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrs-6n-ROr">
+                    <rect key="frame" x="72" y="165" width="256" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="qrs-6n-ROr" firstAttribute="top" secondItem="END-ly-iIa" secondAttribute="bottom" constant="8" id="1O1-co-GTK"/>
                 <constraint firstItem="Hev-HP-Jju" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="1P7-o8-pSb"/>
                 <constraint firstAttribute="trailing" secondItem="Hev-HP-Jju" secondAttribute="trailing" constant="34" id="3tJ-IA-CjD"/>
-                <constraint firstItem="END-ly-iIa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="152" id="5tg-Qk-iLb"/>
+                <constraint firstItem="END-ly-iIa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="122" id="5tg-Qk-iLb"/>
+                <constraint firstItem="Hev-HP-Jju" firstAttribute="top" secondItem="qrs-6n-ROr" secondAttribute="bottom" constant="8" id="7hQ-wL-F4I"/>
                 <constraint firstAttribute="trailing" secondItem="diK-lO-zhj" secondAttribute="trailing" constant="34" id="CkJ-BO-23B"/>
                 <constraint firstItem="END-ly-iIa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="75" id="GMh-R3-zZt"/>
                 <constraint firstItem="7QE-f6-H4A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="GU1-Lj-13c"/>
@@ -86,15 +102,17 @@
                 <constraint firstItem="diK-lO-zhj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="Iaa-P5-Bq9"/>
                 <constraint firstAttribute="bottom" secondItem="7QE-f6-H4A" secondAttribute="bottom" constant="9" id="Iie-22-6pF"/>
                 <constraint firstItem="Qf3-zl-JF3" firstAttribute="height" secondItem="Hev-HP-Jju" secondAttribute="height" id="T1Y-cC-BKq"/>
-                <constraint firstAttribute="trailing" secondItem="kR4-1F-tSv" secondAttribute="trailing" constant="90" id="T39-M5-H2o"/>
+                <constraint firstAttribute="trailing" secondItem="kR4-1F-tSv" secondAttribute="trailing" constant="89" id="T39-M5-H2o"/>
                 <constraint firstItem="Qf3-zl-JF3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="Uen-Ft-gqF"/>
                 <constraint firstItem="diK-lO-zhj" firstAttribute="top" secondItem="Hev-HP-Jju" secondAttribute="bottom" constant="12" id="UoI-qv-2kH"/>
                 <constraint firstAttribute="trailing" secondItem="7QE-f6-H4A" secondAttribute="trailing" constant="68" id="XFE-vR-eZA"/>
-                <constraint firstItem="kR4-1F-tSv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="116" id="YgS-gV-E1I"/>
-                <constraint firstItem="kR4-1F-tSv" firstAttribute="top" secondItem="Qf3-zl-JF3" secondAttribute="bottom" constant="16" id="bNq-vG-R2o"/>
-                <constraint firstItem="Hev-HP-Jju" firstAttribute="top" secondItem="END-ly-iIa" secondAttribute="bottom" constant="46" id="iuC-el-aws"/>
+                <constraint firstItem="kR4-1F-tSv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="117" id="YgS-gV-E1I"/>
+                <constraint firstItem="kR4-1F-tSv" firstAttribute="top" secondItem="Qf3-zl-JF3" secondAttribute="bottom" constant="61" id="bNq-vG-R2o"/>
+                <constraint firstItem="qrs-6n-ROr" firstAttribute="centerX" secondItem="Hev-HP-Jju" secondAttribute="centerX" constant="-1" id="hKa-Tx-Z3P"/>
+                <constraint firstItem="Hev-HP-Jju" firstAttribute="top" secondItem="END-ly-iIa" secondAttribute="bottom" constant="76" id="iuC-el-aws"/>
                 <constraint firstItem="Qf3-zl-JF3" firstAttribute="top" secondItem="diK-lO-zhj" secondAttribute="bottom" constant="12" id="jvZ-4O-NdU"/>
                 <constraint firstItem="diK-lO-zhj" firstAttribute="height" secondItem="Hev-HP-Jju" secondAttribute="height" id="lb3-iv-vHw"/>
+                <constraint firstItem="qrs-6n-ROr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="72" id="n1z-24-XX6"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
