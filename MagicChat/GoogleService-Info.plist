@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>775452712226-1902sqmf10n1ibjfrtkjg7eop7aeq46h.apps.googleusercontent.com</string>
+	<string>898072363191-fcain5579tbp7a7mjmqjs7lnm6lbdrth.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.775452712226-1902sqmf10n1ibjfrtkjg7eop7aeq46h</string>
+	<string>com.googleusercontent.apps.898072363191-fcain5579tbp7a7mjmqjs7lnm6lbdrth</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDDhTdMND_mJm7LsQfweamT8FSpNIqrW4w</string>
+	<string>AIzaSyDnMkQlZ8jKZWTVPdsTOr2sZ9OQ7KErjCY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>775452712226</string>
+	<string>898072363191</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ru.Magic-Chat</string>
+	<string>ru.test.MagicChat</string>
 	<key>PROJECT_ID</key>
-	<string>magicchat-71c95</string>
+	<string>magicchat-e3815</string>
 	<key>STORAGE_BUCKET</key>
-	<string>magicchat-71c95.appspot.com</string>
+	<string>magicchat-e3815.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:775452712226:ios:4d707dceda9e0a4c</string>
+	<string>1:898072363191:ios:b8f6467ade6cd392</string>
 	<key>DATABASE_URL</key>
-	<string>https://magicchat-71c95.firebaseio.com</string>
+	<string>https://magicchat-e3815.firebaseio.com</string>
 </dict>
 </plist>
